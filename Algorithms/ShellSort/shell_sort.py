@@ -28,4 +28,3 @@ if __name__ == '__main__':
     for arr in test_cases:
         shell_sort(arr)
         print("Sorted:", arr)
-        # break
