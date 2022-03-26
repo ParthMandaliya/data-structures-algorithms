@@ -24,7 +24,7 @@ class DoublyLinkedList:
             return
         node = Node(data, self.head, self.tail)
         self.tail = self.head.prev
-        self.tail.next = node #self.head
+        self.tail.next = node 
         self.head.prev = node
         self.head = node
         self.__length += 1
