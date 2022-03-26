@@ -1,4 +1,5 @@
-temp = f"{'/'.join(__file__.split('/')[:-2])}/common"
+import os
+temp = f"{'/'.join(os.path.abspath(__file__).split('/')[:-2])}/common"
 import sys
 sys.path.append(temp)
 
@@ -142,8 +143,6 @@ if __name__ == '__main__':
     print (ll)
     ll.remove_by_value("orange") # remove orange from linked list
     print (ll)
-    # ll.remove_by_value("figs")
-    # print (ll)
     print (f"Length of linked list: {len(ll)}")
     print (f"index of 'mango': {ll.index('mango')}")
     ll.remove_by_value("banana")
