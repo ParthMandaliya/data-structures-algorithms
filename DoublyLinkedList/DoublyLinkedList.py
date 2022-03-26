@@ -1,4 +1,5 @@
-temp = f"{'/'.join(__file__.split('/')[:-2])}/common"
+import os
+temp = f"{'/'.join(os.path.abspath(__file__).split('/')[:-2])}/common"
 import sys
 sys.path.append(temp)
 
@@ -148,13 +149,5 @@ if __name__ == '__main__':
     print (dll)
     print ("-"*20)
     print ("-"*20)
-
-    # print ("head.data:", dll.head.data)
-    # print ("head.prev.data:", dll.head.prev.data)
-    # print ("head.next.data:", dll.head.next.data)
-    # print ("-"*20)
-    # print ("tail.data:", dll.tail.data)
-    # print ("tail.prev.data:", dll.tail.prev.data)
-    # print ("tail.next.data:", dll.tail.next.data)
 
     print (dll.tolist())
